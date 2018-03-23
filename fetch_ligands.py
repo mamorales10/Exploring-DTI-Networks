@@ -12,7 +12,7 @@ from urllib.request import urlopen
 pharos = "https://pharos.nih.gov/idg/api/v1/targets/"
 
 
-def fetch_ligand(target):
+def fetch_ligand(target, output_dir="."):
     # List for storing ligand data with header for csv file
     lig_data = [("id", "smiles", "name", "assay_type", "activity_value")]
     # Fetch target
@@ -44,11 +44,11 @@ def fetch_ligand(target):
         # Add information to list
         lig_data.append((ligand['id'], ligand['text'], name, assay, value))
     # Save all data to a CSV file
-    with open(target + "_ligands.csv", 'w') as out_file:
+    with open(output_dir + "/" + target + "_ligands.csv", 'w') as out_file:
         writer = csv.writer(out_file, delimiter=',')
         writer.writerows(lig_data)
 
 
 if __name__ == "__main__":
     import sys
-    fetch_ligand(sys.argv[1])
+    fetch_ligand(sys.argv[1], sys.argv[2])
