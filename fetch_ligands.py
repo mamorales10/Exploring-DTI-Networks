@@ -23,6 +23,8 @@ def fetch_ligand(target):
     req = urlopen(pharos + '{0}'.format(target_dict['id']) +
                   "/links(kind=ix.idg.models.Ligand)")
     link = json.loads(req.read())
+    if type(link) is dict:
+        link= [link]  # Fixes bug when target has only one ligand.
     for l in tqdm(link):
         name = ""
         # Extract ligand name
