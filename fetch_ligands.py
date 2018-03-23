@@ -43,6 +43,9 @@ def fetch_ligand(target, output_dir="."):
         # Extract SMILES string
         req = urlopen(l['href'] + "/properties(label=CHEMBL Canonical SMILES)")
         ligand = json.loads(req.read())
+        if not ligand:
+            # Skip molecule if no SMILES was found
+            continue
         # Add information to list
         lig_data.append((ligand['id'], ligand['text'], name, assay, value))
     # Save all data to a CSV file
