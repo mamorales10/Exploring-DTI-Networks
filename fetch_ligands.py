@@ -27,6 +27,8 @@ def fetch_ligand(target, output_dir="."):
         link = [link]  # Fixes bug when target has only one ligand.
     for l in tqdm(link):
         name = ""
+        assay = "N/A"
+        value = "N/A"
         # Extract ligand name
         for p in l['properties']:
             if p['label'] == "IDG Ligand" or p['label'] == "IDG Drug":
