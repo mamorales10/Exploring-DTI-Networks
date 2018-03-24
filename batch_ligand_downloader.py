@@ -2,7 +2,7 @@
 # and batch downloading the list of ligands associated with them.
 # Uses fetch_ligands.py
 
-# USAGE: python ligand_dowloader.py path_to_csv 
+# USAGE: python bathc_ligand_downloader.py path_to_csv 
 
 from fetch_ligands import fetch_ligand
 import pandas as pd
