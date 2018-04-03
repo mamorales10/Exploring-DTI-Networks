@@ -2,7 +2,7 @@ import re
 import csv
 
 table = open("Ion_Channels_Table.csv", 'a')
-table.write("Hit Name" + "," + "Accession" + "," + "E-value" + "," + "Description" + ",\n")
+table.write("Protein Number" + "," + "Hit Name" + "," + "Accession" + "," + "E-value" + "," + "Description" + ",\n")
 
 def hit_name (file):
     name_match = re.findall('hits name="(.*)" acc', file)
@@ -34,7 +34,7 @@ while (i <= 346):
     l = len(hm)
     j = 0
     while j < l:
-        table.write(hm[j] + "," + ac[j] + "," + ev[j] + "," + des[j] + ",\n")
+        table.write(str(i) + "," + hm[j] + "," + ac[j] + "," + ev[j] + "," + des[j] + ",\n")
         j = j + 1
     xml.close()
     i = i + 1
