@@ -1,4 +1,4 @@
-# Mol2Vec
+# Mol2vec
 
 This folder contains a trained mol2vec molel, which is based on the word2vec NLP algorithm, and used to generate features in our molecules data set.
 
