@@ -1,0 +1,11 @@
+R program "interactionMatrixMaker" will create interaction matrix by ligands
+files of proteins in Exploring-DTI-Networks/data/ligand_smiles/.
+
+Steps to get interaction matrices;
+1. Extract ligands file in a folder, such as "GPCRs";
+2. Run R function "interactionMatrix" with the folder name like "GPCRs" as
+input
+
+
+Interaction matrices are sparse matrices, so they contain a lot of NAs and 
+their dimensions are very high. It will take a few moments to open those CSV files.
