@@ -12,4 +12,4 @@
 
 6. Wen M, Zhang Z, Niu S, Sha H, Yang R, Yun Y, et al. Deep-Learning-Based Drug–Target Interaction Prediction. Journal of Proteome Research. 2017;16: 1401–1409. doi:10.1021/acs.jproteome.6b00618 
 
-7.Yamanishi Y. Supervised Bipartite Graph Inference. Advances in Neural Information Processing Systems 21 (NIPS 2008). Neural Information Processing Systems Conference;
+7. Yamanishi Y. Supervised Bipartite Graph Inference. Advances in Neural Information Processing Systems 21 (NIPS 2008). Neural Information Processing Systems Conference;
