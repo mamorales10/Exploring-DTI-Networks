@@ -1,9 +1,10 @@
 # Prot2vec
 
-Contains a trained model based on word2vec, which featurizes protein sequences by enbedding into a 100 dimensional vector space.
+Contains a trained model, `protVec_100d_3grams.csv`, based on word2vec, which featurizes protein sequences by embedding into a 100 dimensional vector space.
 The model was trained using 324,018 protein sequences from Swiss-Prot.
 
-
+`prot2vec.py` was used to convert the receptor sequences into vectors.
+The other csv files contain the generated vector embeddings.
 
 **Reference:**
 
