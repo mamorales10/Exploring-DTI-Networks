@@ -6,7 +6,6 @@ Created on Thu Apr 19 15:04:08 2018
 """
 
 from Bio import SeqIO
-import csv
 import glob
 import pandas as pd
 from multiprocessing import Pool
@@ -54,4 +53,4 @@ if __name__ == "__main__":
     vecs.append(pool.map(vectorize, receptors))
     vecs = vecs[0]
     vecs_df = pd.DataFrame(vecs)
-    vecs_df.to_csv(dir_name + "_vec.csv")
+    vecs_df.to_csv(dir_name + "_vec.csv", index=False)
